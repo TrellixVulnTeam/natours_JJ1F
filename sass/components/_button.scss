@@ -1,4 +1,6 @@
 .btn {
+
+	&,
 	&:link,
 	&:visited {
 		display: inline-block;
@@ -9,6 +11,10 @@
 		transition: all 0.2s;
 		position: relative;
 		font-size: $font-size-base;
+
+		// Changed for button element
+		border: none;
+		cursor: pointer;
 	}
 
 	&:hover {
@@ -21,7 +27,9 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	&:focus {
+		outline: none;
 		transform: $lowered-button;
 		box-shadow: $lowered-shadow;
 	}
@@ -64,6 +72,7 @@
 }
 
 .btn-text {
+
 	&:link,
 	&:visited {
 		color: $color-primary;
